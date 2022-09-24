@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" tests="15" skipped="0" failures="0" errors="0" timestamp="2022-09-24T16:01:14" hostname="DESKTOP-TC6IA7B" time="0.311">
+  <properties/>
+  <testcase name="givenAValidTerm_whenTermDoesntMatchsPrePersisted_shouldReturnEmptyPage()" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.036"/>
+  <testcase name="[1] expectedPage=0, expectedPerPage=2, expectedItemsCount=2, expectedTotal=7, expectedCategoryName=Amazon Originals;Documentários" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.028"/>
+  <testcase name="[2] expectedPage=1, expectedPerPage=2, expectedItemsCount=2, expectedTotal=7, expectedCategoryName=Filmes;Kids" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.016"/>
+  <testcase name="[3] expectedPage=2, expectedPerPage=2, expectedItemsCount=2, expectedTotal=7, expectedCategoryName=Netflix Originals;Series" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.017"/>
+  <testcase name="[4] expectedPage=3, expectedPerPage=2, expectedItemsCount=1, expectedTotal=7, expectedCategoryName=Sports" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.02"/>
+  <testcase name="[1] expectedTerms=fil, expectedPage=0, expectedPerPage=10, expectedItemsCount=1, expectedTotal=1, expectedCategoryName=Filmes" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.015"/>
+  <testcase name="[2] expectedTerms=net, expectedPage=0, expectedPerPage=10, expectedItemsCount=1, expectedTotal=1, expectedCategoryName=Netflix Originals" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.014"/>
+  <testcase name="[3] expectedTerms=ZON, expectedPage=0, expectedPerPage=10, expectedItemsCount=1, expectedTotal=1, expectedCategoryName=Amazon Originals" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.015"/>
+  <testcase name="[4] expectedTerms=KI, expectedPage=0, expectedPerPage=10, expectedItemsCount=1, expectedTotal=1, expectedCategoryName=Kids" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.013"/>
+  <testcase name="[5] expectedTerms=crianças, expectedPage=0, expectedPerPage=10, expectedItemsCount=1, expectedTotal=1, expectedCategoryName=Kids" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.019"/>
+  <testcase name="[6] expectedTerms=da Amazon, expectedPage=0, expectedPerPage=10, expectedItemsCount=1, expectedTotal=1, expectedCategoryName=Amazon Originals" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.014"/>
+  <testcase name="[1] expectedSort=name, expectedDirection=asc, expectedPage=0, expectedPerPage=10, expectedItemsCount=7, expectedTotal=7, expectedCategoryName=Amazon Originals" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.014"/>
+  <testcase name="[2] expectedSort=name, expectedDirection=desc, expectedPage=0, expectedPerPage=10, expectedItemsCount=7, expectedTotal=7, expectedCategoryName=Sports" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.018"/>
+  <testcase name="[3] expectedSort=createdAt, expectedDirection=asc, expectedPage=0, expectedPerPage=10, expectedItemsCount=7, expectedTotal=7, expectedCategoryName=Filmes" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.015"/>
+  <testcase name="[4] expectedSort=createdAt, expectedDirection=desc, expectedPage=0, expectedPerPage=10, expectedItemsCount=7, expectedTotal=7, expectedCategoryName=Series" classname="com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT" time="0.015"/>
+  <system-out><![CDATA[2022-09-24 13:01:14.790  INFO 12914 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT], using SpringBootContextLoader
+2022-09-24 13:01:14.791  INFO 12914 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.fullcycle.admin.catalogo.application.category.retrieve.list.ListCategoriesUseCaseIT]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-09-24 13:01:14.792  INFO 12914 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-09-24 13:01:14.792  INFO 12914 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@27a717a7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1d2b49b2, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@59ffb0af, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@d6d88b1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1268ac94, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55c901b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7197b96c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@105e9fef, org.springframework.test.context.event.EventPublishingTestExecutionListener@47858d7c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5a5cd0af, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@16cc5e51, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@72090a80, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@198c97d0, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@25e9f5e6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@512319dc]
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ where upper(categoryjp0_.name) like ? or upper(categoryjp0_.description) like ? order by categoryjp0_.name asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ order by categoryjp0_.name asc limit ?
+Hibernate: select count(categoryjp0_.id) as col_0_0_ from category categoryjp0_
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ order by categoryjp0_.name asc limit ? offset ?
+Hibernate: select count(categoryjp0_.id) as col_0_0_ from category categoryjp0_
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ order by categoryjp0_.name asc limit ? offset ?
+Hibernate: select count(categoryjp0_.id) as col_0_0_ from category categoryjp0_
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ order by categoryjp0_.name asc limit ? offset ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ where upper(categoryjp0_.name) like ? or upper(categoryjp0_.description) like ? order by categoryjp0_.name asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ where upper(categoryjp0_.name) like ? or upper(categoryjp0_.description) like ? order by categoryjp0_.name asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ where upper(categoryjp0_.name) like ? or upper(categoryjp0_.description) like ? order by categoryjp0_.name asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ where upper(categoryjp0_.name) like ? or upper(categoryjp0_.description) like ? order by categoryjp0_.name asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ where upper(categoryjp0_.name) like ? or upper(categoryjp0_.description) like ? order by categoryjp0_.name asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ where upper(categoryjp0_.name) like ? or upper(categoryjp0_.description) like ? order by categoryjp0_.name asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ order by categoryjp0_.name asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ order by categoryjp0_.name desc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ order by categoryjp0_.created_at asc limit ?
+Hibernate: select genrejpaen0_.id as id1_1_, genrejpaen0_.active as active2_1_, genrejpaen0_.created_at as created_3_1_, genrejpaen0_.deleted_at as deleted_4_1_, genrejpaen0_.name as name5_1_, genrejpaen0_.updated_at as updated_6_1_ from genres genrejpaen0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: delete from category where id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: select categoryjp0_.id as id1_0_0_, categoryjp0_.active as active2_0_0_, categoryjp0_.created_at as created_3_0_0_, categoryjp0_.deleted_at as deleted_4_0_0_, categoryjp0_.description as descript5_0_0_, categoryjp0_.name as name6_0_0_, categoryjp0_.updated_at as updated_7_0_0_ from category categoryjp0_ where categoryjp0_.id=?
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: insert into category (active, created_at, deleted_at, description, name, updated_at, id) values (?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from category categoryjp0_
+Hibernate: select categoryjp0_.id as id1_0_, categoryjp0_.active as active2_0_, categoryjp0_.created_at as created_3_0_, categoryjp0_.deleted_at as deleted_4_0_, categoryjp0_.description as descript5_0_, categoryjp0_.name as name6_0_, categoryjp0_.updated_at as updated_7_0_ from category categoryjp0_ order by categoryjp0_.created_at desc limit ?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

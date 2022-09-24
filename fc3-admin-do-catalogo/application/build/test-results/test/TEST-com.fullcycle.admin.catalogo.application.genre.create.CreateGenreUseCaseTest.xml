@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-09-24T16:01:06" hostname="DESKTOP-TC6IA7B" time="0.029">
+  <properties/>
+  <testcase name="givenAInvalidEmptyName_whenCallsCreateGenre_shouldReturnDomainException()" classname="com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest" time="0.014"/>
+  <testcase name="givenAValidCommand_whenCallsCreateGenre_shouldReturnGenreId()" classname="com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest" time="0.002"/>
+  <testcase name="givenAValidCommandWithInactiveGenre_whenCallsCreate_shouldReturnGenreId()" classname="com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest" time="0.001"/>
+  <testcase name="givenAInvalidNullName_whenCallsCreateGenre_shouldReturnDomainException()" classname="com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest" time="0.001"/>
+  <testcase name="givenAnInvalidName_whenCallsCreateGenreAndSomeCategoriesDoesNotExists_shouldReturnDomainException()" classname="com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest" time="0.003"/>
+  <testcase name="givenAValidCommandWithCategories_whenCallsCreateGenre_shouldReturnGenreId()" classname="com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest" time="0.002"/>
+  <testcase name="givenAValidCommand_whenCallsCreateGenreAndSomeCategoriesDoesNotExists_shouldReturnDomainException()" classname="com.fullcycle.admin.catalogo.application.genre.create.CreateGenreUseCaseTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
