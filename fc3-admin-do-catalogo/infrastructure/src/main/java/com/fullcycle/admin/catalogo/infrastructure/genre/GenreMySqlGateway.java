@@ -48,8 +48,7 @@ public class GenreMySqlGateway implements GenreGateway{
 
     @Override
     public Genre update(Genre aGenre) {
-        // TODO Auto-generated method stub
-        return null;
+        return save(aGenre);
     }
 
     @Override
